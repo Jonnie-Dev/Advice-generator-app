@@ -1,3 +1,10 @@
+import "./App.css";
+import Quotes from "./component/Quotes";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <main className="h-[100vh] flex flex-col justify-center items-center">
+      <Quotes />
+    </main>
+  );
 }
