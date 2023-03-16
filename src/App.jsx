@@ -1,10 +1,19 @@
-import "./App.css";
-import Quotes from "./component/Quotes";
+import React from "react";
 
-export default function App() {
+const App = () => {
   return (
-    <main className="h-[100vh] flex flex-col justify-center items-center">
-      <Quotes />
-    </main>
+    <div className="m-0 bg-deepBlue flex align-items-center ">
+      <div className="">
+        <h1 className="">#Advice 117 </h1>
+        <p>
+          <q>Content goes here</q>
+        </p>
+        <img src="/images/pattern-divider-mobile.svg" />
+        <div>
+          <img src="/images/icon-dice.svg" />
+        </div>
+      </div>
+    </div>
   );
 }
+export default App

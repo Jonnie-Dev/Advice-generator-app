@@ -7,8 +7,10 @@ import diceButton from "../assets/icon-dice.svg";
 const Quotes = () => {
   const [quote, setQuote] = useState(null);
   const [media, setMedia] = useState("(min-width:720px)");
-  // https://api.adviceslip.com
-  const handleClick = async () => {};
+  const url = https://api.adviceslip.com
+  const handleClick = async () => {
+    const res = fetch(url)
+  };
 
   return (
     // Template
