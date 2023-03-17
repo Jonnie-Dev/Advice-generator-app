@@ -1,19 +1,12 @@
 import React from "react";
+import Quotes from "./component/Quotes";
 
 const App = () => {
   return (
-    <div className="m-0 bg-deepBlue flex align-items-center ">
-      <div className="">
-        <h1 className="">#Advice 117 </h1>
-        <p>
-          <q>Content goes here</q>
-        </p>
-        <img src="/images/pattern-divider-mobile.svg" />
-        <div>
-          <img src="/images/icon-dice.svg" />
-        </div>
-      </div>
+    <div className="h-[100vh] flex items-center justify-center bg-deepBlue text-2xl">
+      <Quotes />
     </div>
   );
-}
-export default App
+};
+
+export default App;
