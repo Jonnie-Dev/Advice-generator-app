@@ -14,7 +14,7 @@ const App = () => {
           </q>
         </p>
         <img className="mb-4" src="/images/pattern-divider-mobile.svg" />
-        <div className="cursor-pointer  absolute top-[100%] right-[50%] translate-x-2/4 -translate-y-2/4 rounded-full p-4 bg-neonGreen shadow-lg shadow-cyan-500">
+        <div className="cursor-pointer transition-all absolute top-[100%] right-[50%] translate-x-2/4 -translate-y-2/4 rounded-full p-4 bg-neonGreen hover:shadow-[0px_4px_8px_4px_#52ffa833] active:scale-105">
           <img src="/images/icon-dice.svg" />
         </div>
       </div>
