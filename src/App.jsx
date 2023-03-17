@@ -2,8 +2,8 @@ import React from "react";
 
 const App = () => {
   return (
-    <div className="m-0 bg-deepBlue flex align-items-center ">
-      <div className="">
+    <div className=" bg-deepBlue flex max-w-lg">
+      <div className="items-center">
         <h1 className="">#Advice 117 </h1>
         <p>
           <q>Content goes here</q>
@@ -15,5 +15,5 @@ const App = () => {
       </div>
     </div>
   );
-}
-export default App
+};
+export default App;
