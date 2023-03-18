@@ -36,7 +36,7 @@ const App = () => {
           <q>{qoutes.advice}</q>
         </p>
 
-        <picture className="mb-6">
+        <picture className="mb-6 w-[100%]">
           <source
             srcSet="/images/pattern-divider-desktop.svg"
             media="(min-width: 512px)"
