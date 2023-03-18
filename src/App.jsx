@@ -40,7 +40,7 @@ const App = () => {
           </q>
         </p>
 
-        <picture className="mb-6 w-[100%]">
+        <picture className="mb-6">
           <source
             srcSet="/images/pattern-divider-desktop.svg"
             media="(min-width: 512px)"
