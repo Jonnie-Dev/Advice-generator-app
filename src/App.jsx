@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <div className="h-[100vh] flex items-center justify-center bg-deepBlue text-2xl">
-      <div className="max-w-xs md:max-w-lg mx-4 md:mx-0 flex flex-col gap-8 bg-grayishBlue-d p-8 rounded-lg text-center relative">
+      <div className="max-w-lg mx-4 md:mx-0 flex flex-col gap-8 bg-grayishBlue-d p-8 rounded-lg text-center relative">
         <h1 className="text-neonGreen text-[.625rem] tracking-[4.25px]">
           #ADVICE {qoutes.id ? qoutes.id : 0}
         </h1>
