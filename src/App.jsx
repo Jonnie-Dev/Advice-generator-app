@@ -33,7 +33,11 @@ const App = () => {
         </h1>
 
         <p className="text-cyan">
-          <q>{qoutes.advice}</q>
+          <q>
+            {qoutes.advice
+              ? qoutes.advice
+              : "Welcome! Take these advices at your own risk as they are from an API"}
+          </q>
         </p>
 
         <picture className="mb-6">
