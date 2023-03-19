@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const url = "https://api.adviceslip.com/advice";
 const fetchData = async (url) => {
@@ -25,6 +25,10 @@ const App = () => {
     fetchData(url).then((data) => setQuote(data.slip));
   };
 
+  useEffect(() => {
+    handleClick();
+  }, []);
+
   return (
     <div className="h-[100vh] flex items-center justify-center bg-deepBlue text-2xl">
       <div className="max-w-xs md:max-w-lg mx-4 md:mx-0 flex flex-col gap-8 bg-grayishBlue-d p-8 rounded-lg text-center relative">
@@ -34,9 +38,10 @@ const App = () => {
 
         <p className="text-cyan">
           <q>
-            {qoutes.advice
+            {/* {qoutes.advice
               ? qoutes.advice
-              : "Welcome! Take these advices at your own risk as they are from an API"}
+              : "Welcome! Take these advices at your own risk as they are from an API"} */}
+            {qoutes.advice}
           </q>
         </p>
 
