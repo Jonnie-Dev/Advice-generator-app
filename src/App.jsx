@@ -1,32 +1,17 @@
 import React, { useState, useEffect } from "react";
 
 const App = () => {
-  const [qoutes, setQuote] = useState(0);
+  const [qoutes, setQuote] = useState({});
 
   const url = "https://api.adviceslip.com/advice";
-  const fetchData = async (url) => {
-    try {
-      const res = await fetch(url);
-      const data = await res.json();
-      setQuote(data.slip);
-      console.log(data);
-    } catch (error) {
-      let data = {
-        slip: {
-          id: 0,
-          advice: "Never give up, Keep trying.",
-        },
-      };
-      setQuote(data.slip);
-    }
-  };
-
-  const handleClick = () => {
-    fetchData(url);
+  const fetchData = (url) => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setQuote(data.slip));
   };
 
   useEffect(() => {
-    handleClick();
+    fetchData(url);
   }, []);
 
   return (
@@ -54,7 +39,7 @@ const App = () => {
         </picture>
 
         <div
-          onClick={handleClick}
+          onClick={() => fetchData(url)}
           className="cursor-pointer transition-all absolute top-[100%] right-[50%] translate-x-2/4 -translate-y-2/4 rounded-full p-4 bg-neonGreen hover:shadow-[0px_4px_8px_4px_#52ffa833] active:scale-105"
         >
           <img src="/images/icon-dice.svg" />
