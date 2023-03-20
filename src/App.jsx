@@ -4,7 +4,7 @@ const App = () => {
   const [qoutes, setQuote] = useState(0);
 
   const url = "https://api.adviceslip.com/advice";
-  const fetchData = async (url) => {
+  const fetchData = async () => {
     try {
       const res = await fetch(url);
       const data = await res.json();
@@ -17,7 +17,7 @@ const App = () => {
           advice: "Never give up, Keep trying.",
         },
       };
-      // setQuote(data.slip);
+      setQuote(data.slip);
     }
   };
 
