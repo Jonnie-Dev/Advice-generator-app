@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from "react";
 
-const url = "https://api.adviceslip.com/advice";
-const fetchData = async (url) => {
-  try {
-    const res = await fetch(url);
-    const data = await res.json();
-    console.log(data);
-    return data;
-  } catch (error) {
-    let data = {
-      slip: {
-        id: 0,
-        advice: "Never give up, Keep trying.",
-      },
-    };
-    return data;
-  }
-};
-
 const App = () => {
   const [qoutes, setQuote] = useState(0);
 
+  const url = "https://api.adviceslip.com/advice";
+  const fetchData = async (url) => {
+    // try {
+    const res = await fetch(url);
+    const data = await res.json();
+    setQuote(data.slip);
+    console.log(data);
+    // } catch (error) {
+    //   let data = {
+    //     slip: {
+    //       id: 0,
+    //       advice: "Never give up, Keep trying.",
+    //     },
+    //   };
+    //   // setQuote(data.slip);
+    // }
+  };
+
   const handleClick = () => {
-    fetchData(url).then((data) => setQuote(data.slip));
+    fetchData(url);
   };
 
   useEffect(() => {
