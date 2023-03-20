@@ -17,7 +17,7 @@ const App = () => {
           advice: "Never give up, Keep trying.",
         },
       };
-      // setQuote(data.slip);
+      setQuote(data.slip);
     }
   };
 
