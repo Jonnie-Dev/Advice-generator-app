@@ -5,20 +5,20 @@ const App = () => {
 
   const url = "https://api.adviceslip.com/advice";
   const fetchData = async (url) => {
-    // try {
-    const res = await fetch(url);
-    const data = await res.json();
-    setQuote(data.slip);
-    console.log(data);
-    // } catch (error) {
-    //   let data = {
-    //     slip: {
-    //       id: 0,
-    //       advice: "Never give up, Keep trying.",
-    //     },
-    //   };
-    //   // setQuote(data.slip);
-    // }
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      setQuote(data.slip);
+      console.log(data);
+    } catch (error) {
+      let data = {
+        slip: {
+          id: 0,
+          advice: "Never give up, Keep trying.",
+        },
+      };
+      // setQuote(data.slip);
+    }
   };
 
   const handleClick = () => {
