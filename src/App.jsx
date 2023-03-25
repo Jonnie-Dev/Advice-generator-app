@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const App = () => {
-  const [qoutes, setQuote] = useState(0);
+  const [qoutes, setQuote] = useState({});
 
   const genRandomNum = () => Math.floor(Math.random() * 224) + 1;
   const url = `https://api.adviceslip.com/advice/${genRandomNum()}`;
@@ -11,8 +11,6 @@ const App = () => {
       const res = await fetch(url);
       const data = await res.json();
       setQuote(data.slip);
-      console.log(genRandomNum());
-      console.log(data);
     } catch (error) {
       let data = {
         slip: {
