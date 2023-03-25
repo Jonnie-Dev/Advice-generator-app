@@ -9,11 +9,12 @@ const App = () => {
       const res = await fetch(url);
       const data = await res.json();
       setQuote(data.slip);
+      console.log(genRandomNum());
       console.log(data);
     } catch (error) {
       let data = {
         slip: {
-          id: 0,
+          id: "@!",
           advice: "Never give up, Keep trying.",
         },
       };
@@ -21,11 +22,12 @@ const App = () => {
     }
   };
 
-  const handleClick = () => {
-    fetchData(url);
-  };
+  // const handleClick = () => {
+  //   fetchData(url);
+  // };
 
   useEffect(() => {
+    fetchData(url);
     fetchData(url);
   }, []);
 
@@ -54,6 +56,7 @@ const App = () => {
         </picture>
 
         <div
+          onClick={() => fetchData(url)}
           onClick={() => fetchData(url)}
           className="cursor-pointer transition-all absolute top-[100%] right-[50%] translate-x-2/4 -translate-y-2/4 rounded-full p-4 bg-neonGreen hover:shadow-[0px_4px_8px_4px_#52ffa833] active:scale-105"
         >
