@@ -9,8 +9,6 @@ const App = () => {
       const res = await fetch(url);
       const data = await res.json();
       setQuote(data.slip);
-      console.log(genRandomNum());
-      console.log(data);
     } catch (error) {
       let data = {
         slip: {
